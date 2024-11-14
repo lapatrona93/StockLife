@@ -156,7 +156,7 @@ StockLife is an intuitive software tool designed to streamline the management of
 
 
 #### 7. Update distributor
-- **Endpoint**: PUT /api/products
+- **Endpoint**: PUT /api/products/{distributor_id}
 - **Description** : Updates distributor information
 - **Request Body(JSON)**:
 
@@ -173,6 +173,33 @@ StockLife is an intuitive software tool designed to streamline the management of
   {
     "message": "Distributor : XXX successfully updated"
     }
+
+#### 8. Update product
+- **Endpoint**: PUT /api/products/{product_id}
+- **Description** : Updates distributor information
+- **Request Body(JSON)**:
+
+  ```http
+  {
+    "barcode": "1234567890",
+    "name": "Product A",
+    "description": "test test",
+    "Unit": "100ml",
+    "distributor": "Distributor XYZ",
+    "invoice_number": "INV12345",
+    "invoice_date": "2024-11-13",
+    "expiry_date": "2025-11-13",
+    "quantity": "100",
+    "category": "Food"
+    "days_to_expire": "79"
+       
+
+- **Response**:
+    ```http
+  {
+    "message": "Product succesfully updated."
+    }
+
 
 ## Database & Tables
 
